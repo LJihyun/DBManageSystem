@@ -25,6 +25,7 @@ public class ManageSystem extends JFrame implements ActionListener {
 	    btnUpdate.setVisible(false);
 	    btnDelete.setEnabled(false);
 	    btnDelete.setVisible(false);
+
 	}
 	
 	public ManageSystem(Franchising_List fList) {
@@ -33,6 +34,7 @@ public class ManageSystem extends JFrame implements ActionListener {
 	    btnUpdate.setVisible(false);
 	    btnDelete.setEnabled(false);
 	    btnDelete.setVisible(false);
+
 	    this.fList = fList;
 	}
 	
@@ -118,11 +120,11 @@ public class ManageSystem extends JFrame implements ActionListener {
         btnInsert = new JButton("등록");
         btnUpdate = new JButton("수정"); 
         btnDelete = new JButton("탈퇴");
-        btnCancel = new JButton("취소");     
+        btnCancel = new JButton("취소");    
         pButton.add(btnInsert);
         pButton.add(btnUpdate);
         pButton.add(btnDelete);
-        pButton.add(btnCancel); 
+        pButton.add(btnCancel);
         gbAdd(pButton, 0, 6, 4, 1);
 
         btnInsert.addActionListener(this);
@@ -171,6 +173,7 @@ public class ManageSystem extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(this, "삭제를 취소하였습니다.");
             }
         }
+
 		
 		fList.jTableRefresh();
 	}

@@ -22,7 +22,7 @@ public class Franchising_List extends JFrame implements MouseListener, ActionLis
     JTable jTable;
     JScrollPane pane;
     JPanel pbtn;
-    JButton btnInsert, btnOrder;
+    JButton btnInsert, btnProduct;
     
     public Franchising_List() {
     	super("Franchising Manage System");
@@ -42,13 +42,13 @@ public class Franchising_List extends JFrame implements MouseListener, ActionLis
         add(pbtn, BorderLayout.NORTH);
         
         pbtn = new JPanel();
-        btnOrder = new JButton("拱前殿废");
-        pbtn.add(btnOrder);
+        btnProduct = new JButton("拱前包府");
+        pbtn.add(btnProduct);
         add(pbtn, BorderLayout.WEST);
          
         jTable.addMouseListener(this);
         btnInsert.addActionListener(this);
-        btnOrder.addActionListener(this);
+        btnProduct.addActionListener(this);
           
         setSize(1000,300);
         setVisible(true);
@@ -91,9 +91,8 @@ public class Franchising_List extends JFrame implements MouseListener, ActionLis
 		if(e.getSource() == btnInsert) {
 			new ManageSystem(this);
 		}
-		else if(e.getSource() == btnOrder) {
-			
-			Product_Manage product = new Product_Manage(id, this);
+		else if(e.getSource() == btnProduct) {
+			new Product_List();
 		}
 	}
 
